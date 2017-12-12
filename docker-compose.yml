@@ -1,0 +1,11 @@
+version: "2"
+services:
+  memory-leak:
+    build: ./
+    ports: 
+     - "50001:80"
+    restart: always
+    mem_limit: 200m
+    volumes:
+      - ./bin/publish:/app
+    container_name: memory-leak
